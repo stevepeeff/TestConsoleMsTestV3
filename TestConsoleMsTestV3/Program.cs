@@ -1,26 +1,61 @@
-﻿using System;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel;
-using Microsoft.VisualStudio.TestPlatform.Extensions.TrxLogger;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter;
-
-using Microsoft.VisualStudio.TestPlatform.ObjectModel.Client;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel.Logging;
-
-using Microsoft.VisualStudio.TestPlatform.CrossPlatEngine;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities;
+﻿using Microsoft.Testing.Extensions;
+using Microsoft.Testing.Platform.Builder;
+using Microsoft.Testing.Platform.Extensions;
 using Microsoft.Testing.Platform.Extensions.TestFramework;
+using Microsoft.Testing.Platform.Services;
+using System.Threading.Tasks;
+
+//using TestingPlatformExplorer.InProcess;
+//using TestingPlatformExplorer.OutOfProcess;
+//using TestingPlatformExplorer.TestingFramework;
 
 namespace TestConsoleMsTestV3
 {
-    internal class Program
-    {
-        private static void Main(string[] args)
-        {
-            ITestFramework x;
+    //internal class Program
+    //{
+    //    private static async void Main(string[] args)
+    //    {
+    //        // Create the test application builder
+    //        ITestApplicationBuilder testApplicationBuilder = await TestApplication.CreateBuilderAsync(args);
 
-            //  var tesplatform = new
+    //        // testApplicationBuilder.RegisterTestFramework();// register factories
 
-            Console.WriteLine("Hello, World!");
-        }
-    }
+    //        // Register the testing framework
+    //        // testApplicationBuilder.AddTestingFramework(() => new[] { Assembly.GetExecutingAssembly() });
+
+    //        // In-process & out-of-process extensions
+    //        // Register the testing framework command line options
+    //        // testApplicationBuilder.CommandLine.AddProvider(() => new TestingFrameworkCommandLineOptions());
+
+    //        // In-process extensions
+    //        //testApplicationBuilder.TestHost.AddTestApplicationLifecycleCallbacks(serviceProvider
+    //        //    => new DisplayTestApplicationLifecycleCallbacks(serviceProvider.GetOutputDevice()));
+    //        //testApplicationBuilder.TestHost.AddTestSessionLifetimeHandle(serviceProvider
+    //        //    => new DisplayTestSessionLifeTimeHandler(serviceProvider.GetOutputDevice()));
+    //        //testApplicationBuilder.TestHost.AddDataConsumer(serviceProvider
+    //        //    => new DisplayDataConsumer(serviceProvider.GetOutputDevice()));
+
+    //        //// Out-of-process extensions
+    //        //testApplicationBuilder.TestHostControllers.AddEnvironmentVariableProvider(_
+    //        //    => new SetEnvironmentVariableForTestHost());
+    //        //testApplicationBuilder.TestHostControllers.AddProcessLifetimeHandler(serviceProvider =>
+    //        //    new MonitorTestHost(serviceProvider.GetOutputDevice()));
+
+    //        //// In-process composite extension SessionLifeTimeHandler+DataConsumer
+    //        //CompositeExtensionFactory<DisplayCompositeExtensionFactorySample> compositeExtensionFactory = new(serviceProvider => new DisplayCompositeExtensionFactorySample(serviceProvider.GetOutputDevice()));
+    //        //testApplicationBuilder.TestHost.AddTestSessionLifetimeHandle(compositeExtensionFactory);
+    //        //testApplicationBuilder.TestHost.AddDataConsumer(compositeExtensionFactory);
+
+    //        // Register public extensions
+    //        // Trx
+    //        testApplicationBuilder.AddTrxReportProvider();
+
+    //        using ITestApplication testApplication = await testApplicationBuilder.BuildAsync();
+    //        return await testApplication.RunAsync();
+
+    //        ITestFramework x;
+
+    //        //  var tesplatform = new
+    //    }
+    //}
 }

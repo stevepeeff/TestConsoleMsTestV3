@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace TestConsoleMsTestV3
 {
+    [TestClass]
     public class TestExample
     {
         [TestMethod]
